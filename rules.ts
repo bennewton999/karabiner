@@ -56,43 +56,26 @@ const rules: KarabinerRules[] = [
     ],
   },
   ...createHyperSubLayers({
-    spacebar: open(
-      "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
-    ),
+    // spacebar: open(
+    //   "raycast://extensions/stellate/mxstbr-commands/create-notion-todo"
+    // ),
     // b = "B"rowse
     b: {
       t: open("https://twitter.com"),
-      // Quarterly "P"lan
-      p: open("https://qrtr.ly/plan"),
       y: open("https://news.ycombinator.com"),
-      f: open("https://facebook.com"),
-      r: open("https://reddit.com"),
     },
     // o = "Open" applications
     o: {
-      1: app("1Password"),
-      g: app("Google Chrome"),
-      c: app("Notion Calendar"),
-      v: app("Visual Studio Code"),
-      d: app("Discord"),
-      s: app("Slack"),
-      e: app("Superhuman"),
+      c: app("Google Chrome"),
+      v: app("Visual Studio Code - Insiders"),
+      e: app("Outlook"),
       n: app("Notion"),
-      t: app("Warp"),
-      // Open todo list managed via *H*ypersonic
+      t: app("Teams"),
       h: open(
         "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
       ),
-      z: app("zoom.us"),
-      // "M"essages
-      m: app("Texts"),
       f: app("Finder"),
-      r: app("Texts"),
-      // "i"Message
-      i: app("Texts"),
-      p: app("Spotify"),
       a: app("iA Presenter"),
-      // "W"hatsApp has been replaced by Texts
       w: open("Texts"),
       l: open(
         "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
@@ -303,6 +286,7 @@ const rules: KarabinerRules[] = [
 
     // r = "Raycast"
     r: {
+      j: open("https://jira.inbcu.com/browse/Query"),
       n: open("raycast://script-commands/dismiss-notifications"),
       l: open(
         "raycast://extensions/stellate/mxstbr-commands/create-mxs-is-shortlink"
@@ -310,19 +294,19 @@ const rules: KarabinerRules[] = [
       e: open(
         "raycast://extensions/raycast/emoji-symbols/search-emoji-symbols"
       ),
-      c: open("raycast://extensions/raycast/system/open-camera"),
+      d: open("raycast://extensions/raycast/raycast/search-quicklinks"),
+      // c: open("raycast://extensions/raycast/system/open-camera"),
       p: open("raycast://extensions/raycast/raycast/confetti"),
-      a: open("raycast://extensions/raycast/raycast-ai/ai-chat"),
-      s: open("raycast://extensions/peduarte/silent-mention/index"),
-      h: open(
-        "raycast://extensions/raycast/clipboard-history/clipboard-history"
+      v: open(
+        "raycast://extensions/MarkusLanger/vscode-project-manager/search-project-manager-projects"
       ),
+      t: open("raycast://extensions/KevinBatdorf/obsidian/dailyNoteCommand"),
       1: open(
         "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
       ),
-      2: open(
-        "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
-      ),
+      // 2: open(
+      //   "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-2"
+      // ),
     },
   }),
 ];
