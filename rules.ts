@@ -38,21 +38,6 @@ const rules: KarabinerRules[] = [
         ],
         type: "basic",
       },
-      //      {
-      //        type: "basic",
-      //        description: "Disable CMD + Tab to force Hyper Key usage",
-      //        from: {
-      //          key_code: "tab",
-      //          modifiers: {
-      //            mandatory: ["left_command"],
-      //          },
-      //        },
-      //        to: [
-      //          {
-      //            key_code: "tab",
-      //          },
-      //        ],
-      //      },
     ],
   },
   ...createHyperSubLayers({
@@ -63,26 +48,17 @@ const rules: KarabinerRules[] = [
     b: {
       t: open("https://twitter.com"),
       y: open("https://news.ycombinator.com"),
+      j: open("https://jira.inbcu.com"),
     },
     // o = "Open" applications
     o: {
       c: app("Google Chrome"),
       v: app("Visual Studio Code - Insiders"),
-      e: app("Outlook"),
-      n: app("Notion"),
-      t: app("Teams"),
-      h: open(
-        "notion://www.notion.so/stellatehq/7b33b924746647499d906c55f89d5026"
-      ),
+      e: app("Microsoft Outlook"),
+      t: app("Microsoft Teams (work or school)"),
       f: app("Finder"),
-      a: app("iA Presenter"),
-      w: open("Texts"),
-      l: open(
-        "raycast://extensions/stellate/mxstbr-commands/open-mxs-is-shortlink"
-      ),
     },
 
-    // w = "Window" via rectangle.app
     w: {
       semicolon: {
         description: "Window: Hide",
@@ -93,13 +69,6 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      y: rectangle("previous-display"),
-      o: rectangle("next-display"),
-      k: rectangle("top-half"),
-      j: rectangle("bottom-half"),
-      h: rectangle("left-half"),
-      l: rectangle("right-half"),
-      f: rectangle("maximize"),
       u: {
         description: "Window: Previous Tab",
         to: [
@@ -159,53 +128,12 @@ const rules: KarabinerRules[] = [
 
     // s = "System"
     s: {
-      u: {
-        to: [
-          {
-            key_code: "volume_increment",
-          },
-        ],
-      },
-      j: {
-        to: [
-          {
-            key_code: "volume_decrement",
-          },
-        ],
-      },
-      i: {
-        to: [
-          {
-            key_code: "display_brightness_increment",
-          },
-        ],
-      },
-      k: {
-        to: [
-          {
-            key_code: "display_brightness_decrement",
-          },
-        ],
-      },
       l: {
         to: [
           {
+            // lock screen
             key_code: "q",
             modifiers: ["right_control", "right_command"],
-          },
-        ],
-      },
-      p: {
-        to: [
-          {
-            key_code: "play_or_pause",
-          },
-        ],
-      },
-      semicolon: {
-        to: [
-          {
-            key_code: "fastforward",
           },
         ],
       },
@@ -252,35 +180,11 @@ const rules: KarabinerRules[] = [
       l: {
         to: [{ key_code: "right_arrow" }],
       },
-      // Magicmove via homerow.app
-      m: {
-        to: [{ key_code: "f", modifiers: ["right_control"] }],
-      },
-      // Scroll mode via homerow.app
-      s: {
-        to: [{ key_code: "j", modifiers: ["right_control"] }],
-      },
-      d: {
-        to: [{ key_code: "d", modifiers: ["right_shift", "right_command"] }],
-      },
       u: {
         to: [{ key_code: "page_down" }],
       },
       i: {
         to: [{ key_code: "page_up" }],
-      },
-    },
-
-    // c = Musi*c* which isn't "m" because we want it to be on the left hand
-    c: {
-      p: {
-        to: [{ key_code: "play_or_pause" }],
-      },
-      n: {
-        to: [{ key_code: "fastforward" }],
-      },
-      b: {
-        to: [{ key_code: "rewind" }],
       },
     },
 
@@ -301,7 +205,7 @@ const rules: KarabinerRules[] = [
         "raycast://extensions/MarkusLanger/vscode-project-manager/search-project-manager-projects"
       ),
       t: open("raycast://extensions/KevinBatdorf/obsidian/dailyNoteCommand"),
-      1: open(
+      a: open(
         "raycast://extensions/VladCuciureanu/toothpick/connect-favorite-device-1"
       ),
       // 2: open(
